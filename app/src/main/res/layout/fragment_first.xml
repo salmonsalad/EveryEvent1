@@ -19,10 +19,12 @@
     <Button
         android:id="@+id/button_first"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
+        app:layout_constraintTop_toBottomOf="@id/textview_first"
+        android:fontFamily="@font/sUITE_Light"
+        android:background="@drawable/edit_button_drawble"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,37 +20,52 @@
 
             <Button
                 android:id="@+id/announcementButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="공지사항" />
+                android:text="공지사항"
+                android:textSize="10sp"
+                android:fontFamily="@font/sUITE_ExtraBold"
+                android:background="@drawable/edit_button_drawble"/>
 
             <Button
                 android:id="@+id/recentEventButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="최근본이벤트" />
+                android:background="@drawable/edit_button_drawble"
+                android:fontFamily="@font/sUITE_ExtraBold"
+                android:text="최근본\n이벤트"
+                android:textSize="10sp" />
 
             <Button
                 android:id="@+id/HomeButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="홈" />
+                android:text="홈"
+                android:textSize="10sp"
+                android:fontFamily="@font/sUITE_ExtraBold"
+                android:background="@drawable/edit_button_drawble"/>
 
             <Button
                 android:id="@+id/eventMakingButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="이벤트 생성" />
+                android:text="이벤트 생성"
+                android:textSize="10sp"
+                android:fontFamily="@font/sUITE_ExtraBold"
+                android:background="@drawable/edit_button_drawble"/>
 
             <Button
                 android:id="@+id/QRButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:text="QR" />
+                android:text="QR"
+                android:textSize="10sp"
+                android:fontFamily="@font/sUITE_ExtraBold"
+                android:background="@drawable/edit_button_drawble"/>
         </LinearLayout>
 </RelativeLayout>

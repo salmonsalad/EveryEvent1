@@ -12,6 +12,7 @@
         android:layout_height="150dp"
         android:gravity="center"
         android:text="회원정보"
+        android:fontFamily="@font/sUITE_Bold"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -37,42 +38,56 @@
         <EditText
             android:id="@+id/nameEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="이름"
+            android:hint=" 이름"
+            android:fontFamily="@font/sUITE_Light"
             android:inputType="textEmailAddress"
-            android:textSize="19dp" />
+            android:background="@drawable/edit_text_drawble"/>
 
         <EditText
             android:id="@+id/phoneNumberEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
             android:ems="10"
-            android:hint="전화번호"
-            android:inputType="phone" />
+            android:hint=" 전화번호"
+            android:fontFamily="@font/sUITE_Light"
+            android:inputType="phone"
+            android:background="@drawable/edit_text_drawble"/>
 
         <EditText
             android:id="@+id/birthDayEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
             android:ems="10"
-            android:hint="생일"
-            android:inputType="date" />
+            android:hint=" 생일"
+            android:fontFamily="@font/sUITE_Light"
+            android:inputType="date"
+            android:background="@drawable/edit_text_drawble"/>
 
         <EditText
             android:id="@+id/addressEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
             android:ems="10"
-            android:hint="주소"
-            android:inputType="textPostalAddress" />
+            android:hint=" 주소"
+            android:fontFamily="@font/sUITE_Light"
+            android:inputType="textPostalAddress"
+            android:background="@drawable/edit_text_drawble"/>
 
         <Button
             android:id="@+id/checkButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="확인" />
+            android:layout_width="343dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit_button_drawble"
+            android:text="확인"
+            android:fontFamily="@font/sUITE_Light"/>
 
     </LinearLayout>
 

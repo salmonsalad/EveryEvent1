@@ -5,13 +5,16 @@
     <item
         android:id="@+id/userInfo"
         android:title="유저 정보"
+        android:fontFamily="@font/sUITE_Light"
         app:showAsAction="never"/>
     <item
         android:id="@+id/eventInterested"
         android:title="관심 이벤트"
+        android:fontFamily="@font/sUITE_Light"
         app:showAsAction="never" />
     <item
         android:id="@+id/logout"
         android:title="로그아웃"
+        android:fontFamily="@font/sUITE_Light"
         app:showAsAction="never" />
 </menu>

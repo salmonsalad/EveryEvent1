@@ -11,6 +11,7 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="회원가입"
+        android:fontFamily="@font/sUITE_Bold"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -23,43 +24,57 @@
         <EditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="이메일"
+            android:hint=" 이메일"
+            android:fontFamily="@font/sUITE_Light"
+            android:background="@drawable/edit_text_drawble"
             android:inputType="textEmailAddress"
             android:textSize="19dp" />
 
         <EditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_margin="5dp"
             android:ems="10"
-            android:hint="비밀번호"
+            android:hint=" 비밀번호"
+            android:fontFamily="@font/sUITE_Light"
+            android:background="@drawable/edit_text_drawble"
             android:inputType="textPassword"
             android:textSize="19dp" />
 
         <EditText
             android:id="@+id/passwordCheckEditText"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
             android:ems="10"
-            android:hint="비밀번호 확인"
+            android:hint=" 비밀번호 확인"
+            android:fontFamily="@font/sUITE_Light"
+            android:background="@drawable/edit_text_drawble"
             android:inputType="textPassword"
             android:textSize="19dp" />
 
         <Button
             android:id="@+id/checkButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="회원가입" />
+            android:layout_width="343dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:text="회원가입"
+            android:background="@drawable/edit_button_drawble"
+            android:fontFamily="@font/sUITE_Light"/>
 
         <Button
             android:id="@+id/gotoLoginButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="343dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/edit_button_drawble"
+            android:fontFamily="@font/sUITE_Light"
+            android:layout_margin="5dp"
             android:text="로그인" />
     </LinearLayout>
 
