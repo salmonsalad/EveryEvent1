@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<?xml version="1.0" encoding="utf-8"?>
 <font-family xmlns:android="http://schemas.android.com/apk/res/android">
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_Bold"/>
+        android:font="@font/suite_bold"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_ExtraBold"/>
+        android:font="@font/suite_extrabold"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_Heavy"/>
+        android:font="@font/suite_heavy"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_Light"/>
+        android:font="@font/suite_light"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_Medium"/>
+        android:font="@font/suite_medium"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_Regular"/>
+        android:font="@font/suite_regular"/>
 
     <font android:fontStyle="normal"
         android:fontWeight="400"
-        android:font="@font/sUITE_SemiBold"/>
+        android:font="@font/suite_semibold"/>
 
 </font-family>

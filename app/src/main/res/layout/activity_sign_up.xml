@@ -11,7 +11,7 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="회원가입"
-        android:fontFamily="@font/sUITE_Bold"
+        android:fontFamily="@font/suite_bold"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -28,7 +28,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 이메일"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:background="@drawable/edit_text_drawble"
             android:inputType="textEmailAddress"
             android:textSize="19dp" />
@@ -40,7 +40,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 비밀번호"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:background="@drawable/edit_text_drawble"
             android:inputType="textPassword"
             android:textSize="19dp" />
@@ -52,7 +52,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 비밀번호 확인"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:background="@drawable/edit_text_drawble"
             android:inputType="textPassword"
             android:textSize="19dp" />
@@ -65,7 +65,7 @@
             android:layout_margin="5dp"
             android:text="회원가입"
             android:background="@drawable/edit_button_drawble"
-            android:fontFamily="@font/sUITE_Light"/>
+            android:fontFamily="@font/suite_light"/>
 
         <Button
             android:id="@+id/gotoLoginButton"
@@ -73,7 +73,7 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:background="@drawable/edit_button_drawble"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:layout_margin="5dp"
             android:text="로그인" />
     </LinearLayout>

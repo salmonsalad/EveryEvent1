@@ -12,7 +12,7 @@
         android:layout_height="150dp"
         android:gravity="center"
         android:text="회원정보"
-        android:fontFamily="@font/sUITE_Bold"
+        android:fontFamily="@font/suite_bold"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -42,7 +42,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 이름"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="textEmailAddress"
             android:background="@drawable/edit_text_drawble"/>
 
@@ -53,7 +53,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 전화번호"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="phone"
             android:background="@drawable/edit_text_drawble"/>
 
@@ -64,7 +64,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 생일"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="date"
             android:background="@drawable/edit_text_drawble"/>
 
@@ -75,7 +75,7 @@
             android:layout_margin="5dp"
             android:ems="10"
             android:hint=" 주소"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="textPostalAddress"
             android:background="@drawable/edit_text_drawble"/>
 
@@ -87,7 +87,7 @@
             android:layout_marginTop="20dp"
             android:background="@drawable/edit_button_drawble"
             android:text="확인"
-            android:fontFamily="@font/sUITE_Light"/>
+            android:fontFamily="@font/suite_light"/>
 
     </LinearLayout>
 

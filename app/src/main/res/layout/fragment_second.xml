@@ -24,6 +24,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textview_second"
-        android:fontFamily="@font/sUITE_Light"
+        android:fontFamily="@font/suite_light"
         android:background="@drawable/edit_button_drawble"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

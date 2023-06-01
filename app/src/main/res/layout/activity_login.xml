@@ -11,7 +11,7 @@
         android:layout_height="200dp"
         android:gravity="center"
         android:text="로그인"
-        android:fontFamily="@font/sUITE_Bold"
+        android:fontFamily="@font/suite_bold"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -29,7 +29,7 @@
             android:background="@drawable/edit_text_drawble"
             android:ems="10"
             android:hint=" 이메일"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="textEmailAddress"
             android:textSize="19dp" />
 
@@ -42,7 +42,7 @@
             android:background="@drawable/edit_text_drawble"
             android:ems="10"
             android:hint=" 비밀번호"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:inputType="textPassword"
             android:textSize="19dp" />
 
@@ -54,7 +54,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="5dp"
             android:background="@drawable/edit_button_drawble"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:text="로그인" />
 
         <Button
@@ -64,7 +64,7 @@
             android:layout_gravity="center"
             android:layout_margin="5dp"
             android:background="@drawable/edit_button_drawble"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:text="비밀번호 재설정" />
 
         <TextView
@@ -73,7 +73,7 @@
             android:layout_height="wrap_content"
             android:text="회원가입"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/sUITE_Light"
+            android:fontFamily="@font/suite_light"
             android:gravity="center"
             android:onClick="goToSignUp" />
     </LinearLayout>

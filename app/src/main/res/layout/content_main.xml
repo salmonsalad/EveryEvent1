@@ -16,6 +16,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph"
-        android:fontFamily="@font/sUITE_Light"
+        android:fontFamily="@font/suite_light"
         android:background="@drawable/edit_text_drawble"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
