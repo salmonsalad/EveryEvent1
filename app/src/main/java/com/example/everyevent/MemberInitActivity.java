@@ -1,6 +1,5 @@
 package com.example.everyevent;
 
-
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -19,7 +18,6 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.FileProvider;
-
 
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -43,6 +41,9 @@ public class MemberInitActivity extends BasicActivity {
     private Uri uri;
     private ImageView mImage;
     private Button mGallery, mCamera;
+    private String password;
+    private String role;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,69 +60,72 @@ public class MemberInitActivity extends BasicActivity {
     }
 
     @Override
-    public void onBackPressed()    {
+    public void onBackPressed() {
         super.onBackPressed();
         finish();
     }
 
-        View.OnClickListener onClickListener = new View.OnClickListener() {
+    View.OnClickListener onClickListener = new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                switch(v.getId()) {
-                    case R.id.checkButton:
-                        profileUpdate();
-                        break;
-                    case R.id.imageView:
-                        CardView cardView = findViewById(R.id.buttons_card_view);
-                        if(cardView.getVisibility() == View.VISIBLE){
-                            cardView.setVisibility(View.GONE);
-                        }
-                        else{
-                            cardView.setVisibility(View.VISIBLE);
-                        }
-                        break;
-                    case R.id.btn_gallery:
-                        goGallery();
-                        break;
-                    case R.id.btn_picture:
-                        Log.e("tga","adga");
-                        if (ActivityCompat.checkSelfPermission(MemberInitActivity.this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-                            goCamera();
-                        }else{
-                            ActivityCompat.requestPermissions(MemberInitActivity.this, new String[]{android.Manifest.permission.CAMERA}, 1);
-                        }
-                        break;
-                }
-
+        @Override
+        public void onClick(View v) {
+            switch (v.getId()) {
+                case R.id.checkButton:
+                    profileUpdate();
+                    break;
+                case R.id.imageView:
+                    CardView cardView = findViewById(R.id.buttons_card_view);
+                    if (cardView.getVisibility() == View.VISIBLE) {
+                        cardView.setVisibility(View.GONE);
+                    } else {
+                        cardView.setVisibility(View.VISIBLE);
+                    }
+                    break;
+                case R.id.btn_gallery:
+                    goGallery();
+                    break;
+                case R.id.btn_picture:
+                    Log.e("tga", "adga");
+                    if (ActivityCompat.checkSelfPermission(MemberInitActivity.this, android.Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
+                        goCamera();
+                    } else {
+                        ActivityCompat.requestPermissions(MemberInitActivity.this, new String[]{android.Manifest.permission.CAMERA}, 1);
+                    }
+                    break;
             }
-        };
+
+        }
+    };
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data){
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        switch (requestCode){
+        switch (requestCode) {
             case (REQUEST_GALLERY):
-                if(resultCode == Activity.RESULT_OK) {
+                if (resultCode == Activity.RESULT_OK) {
                     try {
                         uri = data.getData();
-                        Log.e("mI",uri.toString());
+                        Log.e("mI", uri.toString());
                         Glide.with(this).load(uri).centerCrop().override(300).into(mImage);
-                    }catch(Exception e){};
+                    } catch (Exception e) {
+                    }
+                    ;
                 }
                 break;
             case (REQUEST_CAMERA):
-                if(resultCode == Activity.RESULT_OK) {
+                if (resultCode == Activity.RESULT_OK) {
                     try {
                         Glide.with(this).load(uri).centerCrop().override(300).into(mImage);
-                    }catch(Exception e){};
+                    } catch (Exception e) {
+                    }
+                    ;
                 }
                 break;
         }
     }
 
-    //갤러리 intent
-    public void goGallery(){
+    // 갤러리 intent
+    public void goGallery() {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         intent.setAction(Intent.ACTION_GET_CONTENT);
@@ -129,8 +133,8 @@ public class MemberInitActivity extends BasicActivity {
         uploadImageFile(uri);
     }
 
-    //카메라 intent
-    public void goCamera(){
+    // 카메라 intent
+    public void goCamera() {
         Toast.makeText(this, "tlqkf", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         File photoFile = null;
@@ -161,19 +165,19 @@ public class MemberInitActivity extends BasicActivity {
     }
 
     private void profileUpdate() {
-        String name = ((EditText)findViewById(R.id.nameEditText)).getText().toString();
-        String phoneNumber = ((EditText)findViewById(R.id.phoneNumberEditText)).getText().toString();
-        String birthDay = ((EditText)findViewById(R.id.birthDayEditText)).getText().toString();
-        String address = ((EditText)findViewById(R.id.addressEditText)).getText().toString();
+        String name = ((EditText) findViewById(R.id.nameEditText)).getText().toString();
+        String phoneNumber = ((EditText) findViewById(R.id.phoneNumberEditText)).getText().toString();
+        String birthDay = ((EditText) findViewById(R.id.birthDayEditText)).getText().toString();
+        String address = ((EditText) findViewById(R.id.addressEditText)).getText().toString();
 
-        Log.e("error", name + " " + phoneNumber +" " + birthDay + " " + address);
-        if(name.length()>0 && phoneNumber.length()>9 && birthDay.length()>5 && address.length() > 0) {
+        Log.e("error", name + " " + phoneNumber + " " + birthDay + " " + address);
+        if (name.length() > 0 && phoneNumber.length() > 9 && birthDay.length() > 5 && address.length() > 0) {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
             FirebaseFirestore db = FirebaseFirestore.getInstance();
 
-            MemberInfo memberInfo = new MemberInfo(name, phoneNumber, birthDay, address);
-            if(user != null) {
-                db.collection("users/user_id_"+user.getUid()+"/profileInformation").document(user.getUid()).set(memberInfo)
+            MemberInfo memberInfo = new MemberInfo(phoneNumber, birthDay, address, name, password, role);
+            if (user != null) {
+                db.collection("users/user_id_" + user.getUid() + "/profileInformation").document(user.getUid()).set(memberInfo)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
                             public void onSuccess(Void aVoid) {
@@ -192,8 +196,7 @@ public class MemberInitActivity extends BasicActivity {
             }
 
 
-
-        }else{
+        } else {
             startToast("회원 정보를 입력해주세요");
 
         }
@@ -202,20 +205,20 @@ public class MemberInitActivity extends BasicActivity {
     }
 
     private void startToast(String msg) {
-        Toast.makeText(this, msg,
-                Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
     }
+
     private void uploadImageFile(Uri uri1) {
         FirebaseStorage storage = FirebaseStorage.getInstance();
         // Create a storage reference from our app
         StorageReference storageRef = storage.getReference();
         Uri file = uri1; //Uri.fromFile(new File(path));
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        StorageReference riversRef = storageRef.child("images/"+user.getUid()+"/profileImage/"+file.getLastPathSegment());
+        StorageReference riversRef = storageRef.child("images/" + user.getUid() + "/profileImage/" + file.getLastPathSegment());
 
         UploadTask uploadTask = riversRef.putFile(file);
 
-// Register observers to listen for when the download is done or if it fails
+        // Register observers to listen for when the download is done or if it fails
         uploadTask.addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception exception) {
@@ -229,8 +232,4 @@ public class MemberInitActivity extends BasicActivity {
             }
         });
     }
-
-
-
-
 }
